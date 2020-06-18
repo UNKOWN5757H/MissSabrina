@@ -27,17 +27,17 @@ def escape_html(word):
     return escape(word)
 
 PM_START_TEXT = """
-Hello *{}* My name is *Sabrina*!
+Hello *{}* My name is *KINGಕನ್ನಡ *!
 
 I'm here to manage your groups! 
 
 Click Help button to find out more about how to use me to my full potential. 
 
-Join Support Chat ( @SabrinaChat ) if you need any support or help 
+Join Support Chat ( @ ) if you need any support or help 
 
-Join ( @SabrinaOfficial ) if you want to keep up with the news, updates and bot downtime!
+Join ( @NGY_BOTS ) if you want to keep up with the news, updates and bot downtime!
 
-Made by @TechnoAyanOfficial
+Made by @NGYNY
 
 Want me to help you? [Click Here!](https://t.me/MissSabrina_bot?startgroup=true)
 """
@@ -61,7 +61,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-DONATE_STRING = """Hey you can Donate to [Ayan Ansari](t.me/TechnoAyanOfficial) for better server """
+DONATE_STRING = """Hey you can Donate to [N I K H I L](t.me/NGYNY) for better server """
 
 
 IMPORTED = {}
@@ -169,12 +169,17 @@ def send_start(bot, update):
                 
     keyboard = [[
         InlineKeyboardButton(text=tld(chat.id, '🥳Add To Group'),
-                             url="https://t.me/MissSabrina_bot?startgroup=true"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
+                             url="https://t.me/KING_NGY_BOT?startgroup=true"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
         ]]
     keyboard += [[
-        InlineKeyboardButton(text=tld(chat.id, '👥 Support Group'), url="https://t.me/SabrinaChat")
+        InlineKeyboardButton(text=tld(chat.id, '👥 Support Channel'), url="https://t.me/NGY_BOTS")
     ]]
+    keyboard += [[
 
+        InlineKeyboardButton(text=tld(chat.id, '😎 CREATE BY LEGEND'), url="https://t.me/NGYNY")
+
+    ]]
+    
     update.effective_message.reply_text(
         text,
         reply_markup=InlineKeyboardMarkup(keyboard),
